@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F229EEE12A0F9510005EBB87 /* ColorPickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEE02A0F9510005EBB87 /* ColorPickerContainerView.swift */; };
+		F229EEE42A0FA64B005EBB87 /* ClearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEE32A0FA64B005EBB87 /* ClearView.swift */; };
+		F229EEE62A0FA6AA005EBB87 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEE52A0FA6AA005EBB87 /* ToolBarView.swift */; };
+		F229EEEA2A0FA89B005EBB87 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEE92A0FA89B005EBB87 /* ViewConstants.swift */; };
+		F229EEEC2A0FA92C005EBB87 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEEB2A0FA92C005EBB87 /* ViewModifiers.swift */; };
+		F229EEEE2A0FAE87005EBB87 /* UndoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEED2A0FAE87005EBB87 /* UndoView.swift */; };
 		F2D7D9B32A0EF73400BE7B57 /* DrawingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7D9B22A0EF73400BE7B57 /* DrawingAppApp.swift */; };
 		F2D7D9B72A0EF73500BE7B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D7D9B62A0EF73500BE7B57 /* Assets.xcassets */; };
 		F2D7D9BB2A0EF73500BE7B57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D7D9BA2A0EF73500BE7B57 /* Preview Assets.xcassets */; };
@@ -18,6 +23,11 @@
 
 /* Begin PBXFileReference section */
 		F229EEE02A0F9510005EBB87 /* ColorPickerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerContainerView.swift; sourceTree = "<group>"; };
+		F229EEE32A0FA64B005EBB87 /* ClearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearView.swift; sourceTree = "<group>"; };
+		F229EEE52A0FA6AA005EBB87 /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
+		F229EEE92A0FA89B005EBB87 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		F229EEEB2A0FA92C005EBB87 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		F229EEED2A0FAE87005EBB87 /* UndoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoView.swift; sourceTree = "<group>"; };
 		F2D7D9AF2A0EF73400BE7B57 /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D7D9B22A0EF73400BE7B57 /* DrawingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppApp.swift; sourceTree = "<group>"; };
 		F2D7D9B62A0EF73500BE7B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,6 +49,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F229EEE22A0FA630005EBB87 /* ToolBarViews */ = {
+			isa = PBXGroup;
+			children = (
+				F229EEE52A0FA6AA005EBB87 /* ToolBarView.swift */,
+				F229EEE72A0FA6AD005EBB87 /* ToolViews */,
+			);
+			path = ToolBarViews;
+			sourceTree = "<group>";
+		};
+		F229EEE72A0FA6AD005EBB87 /* ToolViews */ = {
+			isa = PBXGroup;
+			children = (
+				F229EEED2A0FAE87005EBB87 /* UndoView.swift */,
+				F229EEE32A0FA64B005EBB87 /* ClearView.swift */,
+			);
+			path = ToolViews;
+			sourceTree = "<group>";
+		};
+		F229EEE82A0FA88E005EBB87 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F229EEE92A0FA89B005EBB87 /* ViewConstants.swift */,
+				F229EEEB2A0FA92C005EBB87 /* ViewModifiers.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F2D7D9A62A0EF73400BE7B57 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +97,7 @@
 			children = (
 				F2D7D9C62A0EF9D300BE7B57 /* Models */,
 				F2D7D9C52A0EF9D000BE7B57 /* Views */,
+				F229EEE82A0FA88E005EBB87 /* Utils */,
 				F2D7D9B22A0EF73400BE7B57 /* DrawingAppApp.swift */,
 				F2D7D9B62A0EF73500BE7B57 /* Assets.xcassets */,
 				F2D7D9B82A0EF73500BE7B57 /* DrawingApp.entitlements */,
@@ -80,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				F2D7D9C32A0EF75700BE7B57 /* DrawView.swift */,
+				F229EEE22A0FA630005EBB87 /* ToolBarViews */,
 				F2D7D9C92A0EFBEC00BE7B57 /* ColorViews */,
 			);
 			path = Views;
@@ -172,10 +211,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F229EEE42A0FA64B005EBB87 /* ClearView.swift in Sources */,
 				F2D7D9C82A0EF9DE00BE7B57 /* Line.swift in Sources */,
+				F229EEEE2A0FAE87005EBB87 /* UndoView.swift in Sources */,
+				F229EEE62A0FA6AA005EBB87 /* ToolBarView.swift in Sources */,
+				F229EEEC2A0FA92C005EBB87 /* ViewModifiers.swift in Sources */,
 				F2D7D9B32A0EF73400BE7B57 /* DrawingAppApp.swift in Sources */,
 				F2D7D9C42A0EF75700BE7B57 /* DrawView.swift in Sources */,
 				F229EEE12A0F9510005EBB87 /* ColorPickerContainerView.swift in Sources */,
+				F229EEEA2A0FA89B005EBB87 /* ViewConstants.swift in Sources */,
 				F2D7D9CD2A0EFC1B00BE7B57 /* ColorPickerButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

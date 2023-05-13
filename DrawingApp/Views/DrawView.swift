@@ -27,6 +27,7 @@ struct DrawView: View {
     
     var body: some View {
         VStack {
+            ToolBarView(lines: $lines)
             Canvas { context, size in
                 for line in lines {
                     var path = Path()
@@ -35,6 +36,7 @@ struct DrawView: View {
                     context.stroke(path, with: .color(line.color), style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                 }
             }
+            .frame(maxHeight: .infinity)
             .gesture(dragGesture)
             ColorPickerContainerView(selectedColor: $selectedColor, colors: colors)
         }
