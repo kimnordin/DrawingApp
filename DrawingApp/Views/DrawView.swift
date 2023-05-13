@@ -10,18 +10,23 @@ import SwiftUI
 struct DrawView: View {
     @State private var lines: [Line] = []
     @State private var selectedColor = Color.green
+    @State private var touchEnded = true
     
     let colors: [Color] = [.yellow, .orange, .red, .purple, .blue, .cyan, .green, .mint, .pink]
     
     private var dragGesture: some Gesture {
-        DragGesture(minimumDistance: 0, coordinateSpace: .local)
+        DragGesture(minimumDistance: 1.0, coordinateSpace: .local)
             .onChanged { value in
                 let position = value.location
-                if value.translation == .zero {
+                if touchEnded {
                     lines.append(Line(points: [position], color: selectedColor))
+                    touchEnded = false
                 } else if let lastIdx = lines.indices.last {
                     lines[lastIdx].points.append(position)
                 }
+            }
+            .onEnded { _ in
+                touchEnded = true
             }
     }
     
