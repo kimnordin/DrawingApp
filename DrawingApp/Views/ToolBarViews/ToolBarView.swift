@@ -17,7 +17,7 @@ struct ToolBarView: View {
             HStack {
                 ColorView(selectedColor: $selectedColor, showColorPicker: $showColorPicker)
                 UndoView(lines: $lines)
-                ClearView(lines: $lines)
+                ClearView(lines: $lines, geometry: geometry)
             }
             .padding(5)
             .background(Color.blue)

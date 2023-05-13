@@ -10,10 +10,10 @@ import SwiftUI
 
 // SwiftUI
 extension Image {
-    func asToolView(color: Color = Color.white) -> some View {
+    func asToolView(color: Color = Color.white, size: CGSize = ViewConstants.toolButtonSize) -> some View {
         resizable()
         .foregroundColor(color)
-        .frame(width: ViewConstants.toolButtonSize.width, height: ViewConstants.toolButtonSize.height)
+        .frame(width: size.width, height: size.height)
     }
 }
 
