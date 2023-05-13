@@ -16,13 +16,17 @@ struct ClearView: View {
             HStack {
                 Button {
                     lines.removeAll()
-                    confirmDeletion = false
+                    withAnimation {
+                        confirmDeletion = false
+                    }
                 } label: {
                     Image(systemName: "checkmark.circle.fill")
                         .asToolView()
                 }
                 Button {
-                    confirmDeletion = false
+                    withAnimation {
+                        confirmDeletion = false
+                    }
                 } label: {
                     Image(systemName: "x.circle.fill")
                         .asToolView()
@@ -30,7 +34,9 @@ struct ClearView: View {
             }
         } else {
             Button {
-                confirmDeletion = true
+                withAnimation {
+                    confirmDeletion = true
+                }
             } label: {
                 Image(systemName: "trash.circle.fill")
                     .asToolView()

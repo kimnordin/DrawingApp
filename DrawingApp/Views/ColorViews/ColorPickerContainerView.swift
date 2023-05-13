@@ -39,6 +39,7 @@ struct ColorPickerContainerView: View {
                     .simultaneousGesture(dragGesture(colorIndex))
             }
         }
+        .padding([.leading, .trailing], 8)
         .simultaneousGesture(longPressGesture)
     }
 }

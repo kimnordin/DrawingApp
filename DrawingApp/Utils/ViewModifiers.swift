@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+// SwiftUI
 extension Image {
     func asToolView(color: Color = Color.white) -> some View {
         resizable()
