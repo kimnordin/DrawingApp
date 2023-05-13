@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F229EEE12A0F9510005EBB87 /* ColorPickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEE02A0F9510005EBB87 /* ColorPickerContainerView.swift */; };
 		F2D7D9B32A0EF73400BE7B57 /* DrawingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7D9B22A0EF73400BE7B57 /* DrawingAppApp.swift */; };
-		F2D7D9B52A0EF73400BE7B57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7D9B42A0EF73400BE7B57 /* ContentView.swift */; };
 		F2D7D9B72A0EF73500BE7B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D7D9B62A0EF73500BE7B57 /* Assets.xcassets */; };
 		F2D7D9BB2A0EF73500BE7B57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D7D9BA2A0EF73500BE7B57 /* Preview Assets.xcassets */; };
+		F2D7D9C42A0EF75700BE7B57 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7D9C32A0EF75700BE7B57 /* DrawView.swift */; };
+		F2D7D9C82A0EF9DE00BE7B57 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7D9C72A0EF9DE00BE7B57 /* Line.swift */; };
+		F2D7D9CD2A0EFC1B00BE7B57 /* ColorPickerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7D9CC2A0EFC1B00BE7B57 /* ColorPickerButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F229EEE02A0F9510005EBB87 /* ColorPickerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerContainerView.swift; sourceTree = "<group>"; };
 		F2D7D9AF2A0EF73400BE7B57 /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D7D9B22A0EF73400BE7B57 /* DrawingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppApp.swift; sourceTree = "<group>"; };
-		F2D7D9B42A0EF73400BE7B57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F2D7D9B62A0EF73500BE7B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2D7D9B82A0EF73500BE7B57 /* DrawingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrawingApp.entitlements; sourceTree = "<group>"; };
 		F2D7D9BA2A0EF73500BE7B57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F2D7D9C32A0EF75700BE7B57 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		F2D7D9C72A0EF9DE00BE7B57 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		F2D7D9CC2A0EFC1B00BE7B57 /* ColorPickerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +58,9 @@
 		F2D7D9B12A0EF73400BE7B57 /* DrawingApp */ = {
 			isa = PBXGroup;
 			children = (
+				F2D7D9C62A0EF9D300BE7B57 /* Models */,
+				F2D7D9C52A0EF9D000BE7B57 /* Views */,
 				F2D7D9B22A0EF73400BE7B57 /* DrawingAppApp.swift */,
-				F2D7D9B42A0EF73400BE7B57 /* ContentView.swift */,
 				F2D7D9B62A0EF73500BE7B57 /* Assets.xcassets */,
 				F2D7D9B82A0EF73500BE7B57 /* DrawingApp.entitlements */,
 				F2D7D9B92A0EF73500BE7B57 /* Preview Content */,
@@ -67,6 +74,32 @@
 				F2D7D9BA2A0EF73500BE7B57 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F2D7D9C52A0EF9D000BE7B57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2D7D9C32A0EF75700BE7B57 /* DrawView.swift */,
+				F2D7D9C92A0EFBEC00BE7B57 /* ColorViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2D7D9C62A0EF9D300BE7B57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F2D7D9C72A0EF9DE00BE7B57 /* Line.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2D7D9C92A0EFBEC00BE7B57 /* ColorViews */ = {
+			isa = PBXGroup;
+			children = (
+				F229EEE02A0F9510005EBB87 /* ColorPickerContainerView.swift */,
+				F2D7D9CC2A0EFC1B00BE7B57 /* ColorPickerButtonView.swift */,
+			);
+			path = ColorViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2D7D9B52A0EF73400BE7B57 /* ContentView.swift in Sources */,
+				F2D7D9C82A0EF9DE00BE7B57 /* Line.swift in Sources */,
 				F2D7D9B32A0EF73400BE7B57 /* DrawingAppApp.swift in Sources */,
+				F2D7D9C42A0EF75700BE7B57 /* DrawView.swift in Sources */,
+				F229EEE12A0F9510005EBB87 /* ColorPickerContainerView.swift in Sources */,
+				F2D7D9CD2A0EFC1B00BE7B57 /* ColorPickerButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
