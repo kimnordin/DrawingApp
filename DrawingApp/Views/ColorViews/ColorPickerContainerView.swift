@@ -13,6 +13,12 @@ struct ColorPickerContainerView: View {
     @Binding var selectedColor: Color
     let colors: [Color]
     
+    private var dragGesture: some Gesture {
+        DragGesture(minimumDistance: 0)
+            .onChanged { _ in hoveredColorIndex = colorIndex }
+            .onEnded { _ in hoveredColorIndex = nil }
+    }
+    
     private var longPressGesture: some Gesture {
         LongPressGesture(minimumDuration: 0.5).onChanged { _ in
             isLongPressing = true
@@ -30,10 +36,7 @@ struct ColorPickerContainerView: View {
         HStack {
             ForEach(0..<colors.count, id: \.self) { colorIndex in
                 ColorPickerButtonView(selectedColor: $selectedColor, isHovered: .constant(isLongPressing && hoveredColorIndex == colorIndex), buttonColor: colors[colorIndex])
-                    .simultaneousGesture(DragGesture(minimumDistance: 0)
-                        .onChanged { _ in hoveredColorIndex = colorIndex }
-                        .onEnded { _ in hoveredColorIndex = nil }
-                    )
+                    .simultaneousGesture(dragGesture)
             }
         }
         .simultaneousGesture(longPressGesture)
