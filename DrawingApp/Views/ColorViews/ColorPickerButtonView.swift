@@ -24,7 +24,7 @@ struct ColorPickerButtonView: View {
         VStack {
             Circle()
                 .fill(buttonColor)
-                .scaleEffect(isHovered ? 1.2 : 1.0)
+                .scaleEffect(isHovered ? 1.5 : 1.0)
                 .animation(.easeInOut, value: isHovered)
                 .simultaneousGesture(tapGesture)
         }

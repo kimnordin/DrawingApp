@@ -20,16 +20,17 @@ struct ColorPickerContainerView: View {
     }
     
     private var longPressGesture: some Gesture {
-        LongPressGesture(minimumDuration: 0.5).onChanged { _ in
-            isLongPressing = true
-        }
-        .onEnded { _ in
-            isLongPressing = false
-            if let index = hoveredColorIndex {
-                selectedColor = colors[index]
+        LongPressGesture(minimumDuration: 0.3)
+            .onChanged { _ in
+                isLongPressing = true
             }
-            hoveredColorIndex = nil
-        }
+            .onEnded { _ in
+                isLongPressing = false
+                if let index = hoveredColorIndex {
+                    selectedColor = colors[index]
+                }
+                hoveredColorIndex = nil
+            }
     }
     
     var body: some View {
