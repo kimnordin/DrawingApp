@@ -13,6 +13,7 @@
 		F229EEEA2A0FA89B005EBB87 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEE92A0FA89B005EBB87 /* ViewConstants.swift */; };
 		F229EEEC2A0FA92C005EBB87 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEEB2A0FA92C005EBB87 /* ViewModifiers.swift */; };
 		F229EEEE2A0FAE87005EBB87 /* UndoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229EEED2A0FAE87005EBB87 /* UndoView.swift */; };
+		F2ADB5B22A0FEBF5000F566C /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ADB5B12A0FEBF5000F566C /* ColorView.swift */; };
 		F2D7D9B32A0EF73400BE7B57 /* DrawingAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7D9B22A0EF73400BE7B57 /* DrawingAppApp.swift */; };
 		F2D7D9B72A0EF73500BE7B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D7D9B62A0EF73500BE7B57 /* Assets.xcassets */; };
 		F2D7D9BB2A0EF73500BE7B57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2D7D9BA2A0EF73500BE7B57 /* Preview Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		F229EEE92A0FA89B005EBB87 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		F229EEEB2A0FA92C005EBB87 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		F229EEED2A0FAE87005EBB87 /* UndoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoView.swift; sourceTree = "<group>"; };
+		F2ADB5B12A0FEBF5000F566C /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		F2D7D9AF2A0EF73400BE7B57 /* DrawingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2D7D9B22A0EF73400BE7B57 /* DrawingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingAppApp.swift; sourceTree = "<group>"; };
 		F2D7D9B62A0EF73500BE7B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		F229EEE72A0FA6AD005EBB87 /* ToolViews */ = {
 			isa = PBXGroup;
 			children = (
+				F2ADB5B12A0FEBF5000F566C /* ColorView.swift */,
 				F229EEED2A0FAE87005EBB87 /* UndoView.swift */,
 				F229EEE32A0FA64B005EBB87 /* ClearView.swift */,
 			);
@@ -213,6 +216,7 @@
 			files = (
 				F229EEE42A0FA64B005EBB87 /* ClearView.swift in Sources */,
 				F2D7D9C82A0EF9DE00BE7B57 /* Line.swift in Sources */,
+				F2ADB5B22A0FEBF5000F566C /* ColorView.swift in Sources */,
 				F229EEEE2A0FAE87005EBB87 /* UndoView.swift in Sources */,
 				F229EEE62A0FA6AA005EBB87 /* ToolBarView.swift in Sources */,
 				F229EEEC2A0FA92C005EBB87 /* ViewModifiers.swift in Sources */,

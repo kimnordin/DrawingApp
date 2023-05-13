@@ -11,6 +11,7 @@ struct DrawView: View {
     @State private var lines: [Line] = []
     @State private var selectedColor = Color.green
     @State private var touchEnded = true
+    @State private var showColorPicker = false
     
     let colors: [Color] = [.yellow, .orange, .red, .purple, .blue, .cyan, .green, .mint, .pink]
     
@@ -32,7 +33,7 @@ struct DrawView: View {
     
     var body: some View {
         VStack {
-            ToolBarView(lines: $lines)
+            ToolBarView(lines: $lines, selectedColor: $selectedColor, showColorPicker: $showColorPicker)
             Canvas { context, size in
                 for line in lines {
                     var path = Path()
@@ -43,7 +44,9 @@ struct DrawView: View {
             }
             .frame(maxHeight: .infinity)
             .gesture(dragGesture)
-            ColorPickerContainerView(selectedColor: $selectedColor, colors: colors)
+            if showColorPicker {
+                ColorPickerContainerView(selectedColor: $selectedColor, colors: colors)
+            }
         }
     }
 }

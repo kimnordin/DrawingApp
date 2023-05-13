@@ -9,10 +9,13 @@ import SwiftUI
 
 struct ToolBarView: View {
     @Binding var lines: [Line]
+    @Binding var selectedColor: Color
+    @Binding var showColorPicker: Bool
     
     var body: some View {
         GeometryReader { geometry in
             HStack {
+                ColorView(selectedColor: $selectedColor, showColorPicker: $showColorPicker)
                 UndoView(lines: $lines)
                 ClearView(lines: $lines)
             }
@@ -29,6 +32,6 @@ struct ToolBarView: View {
 
 struct ToolBarView_Previews: PreviewProvider {
     static var previews: some View {
-        ToolBarView(lines: .constant([]))
+        ToolBarView(lines: .constant([]), selectedColor: .constant(.red), showColorPicker: .constant(false))
     }
 }
