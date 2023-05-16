@@ -18,9 +18,9 @@ extension Image {
 }
 
 extension Circle {
-    func asToolView(selectedColor: Color) -> some View {
+    func asToolView(color: Color) -> some View {
         strokeBorder(Color.white, lineWidth: 3)
-        .background(Circle().fill(selectedColor))
+        .background(Circle().fill(color))
         .frame(width: ViewConstants.toolButtonSize.width, height: ViewConstants.toolButtonSize.height)
     }
 }

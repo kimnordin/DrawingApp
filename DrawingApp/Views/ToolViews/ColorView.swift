@@ -16,13 +16,13 @@ struct ColorView: View {
             showColorPicker.toggle()
         } label: {
             Circle()
-                .asToolView(selectedColor: selectedColor)
+                .asToolView(color: selectedColor)
         }
     }
 }
 
 struct ColorView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorView(selectedColor: .constant(.red), showColorPicker: .constant(false))
+        ColorView(selectedColor: .constant(.red), showColorPicker: .constant(true))
     }
 }
