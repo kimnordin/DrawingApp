@@ -14,7 +14,7 @@ struct ToolBarView: View {
         GeometryReader { geometry in
             HStack {
                 ColorView(selectedColor: $viewModel.selectedCanvasColor, showColorPicker: $viewModel.showCanvasColorPicker)
-                ColorView(selectedColor: $viewModel.selectedDrawColor, showColorPicker: $viewModel.showColorPicker)
+                ColorView(selectedColor: $viewModel.selectedDrawColor, showColorPicker: $viewModel.showPencilEditor)
                 UndoView(lines: $viewModel.lines)
                 ClearView(lines: $viewModel.lines, geometry: geometry)
             }

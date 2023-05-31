@@ -9,17 +9,17 @@ import SwiftUI
 
 struct MainDrawView: View {
     @StateObject private var viewModel = ToolViewModel()
-    let colors: [Color] = [.yellow, .orange, .red, .purple, .blue, .cyan, .green, .mint, .pink]
+    let colors: [Color] = [.white, .black, .yellow, .orange, .red, .purple, .blue, .cyan, .green, .mint, .pink]
     
     var body: some View {
         VStack {
             ToolBarView(viewModel: viewModel)
-            CanvasView(viewModel: viewModel)
-            if viewModel.showColorPicker {
-                ColorPickerContainerView(selectedColor: $viewModel.selectedDrawColor, colors: colors)
+            DrawingView(viewModel: viewModel)
+            if viewModel.showPencilEditor {
+                PencilContainerView(viewModel: viewModel, colors: colors)
             }
             if viewModel.showCanvasColorPicker {
-                ColorPickerContainerView(selectedColor: $viewModel.selectedCanvasColor, colors: colors)
+                CanvasContainerView(viewModel: viewModel, colors: colors)
             }
         }
         .background(viewModel.selectedCanvasColor)
