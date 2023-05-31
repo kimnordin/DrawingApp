@@ -13,7 +13,7 @@ class ToolViewModel: ObservableObject {
     @Published var selectedDrawColor = Color.green
     @Published var selectedCanvasColor = Color.yellow
     @Published var touchEnded = true
-    @Published var showColorPicker = false
+    @Published var showPencilEditor = false
     @Published var showCanvasColorPicker = false
     @Published var lineWidth: Double = 5.0
 }

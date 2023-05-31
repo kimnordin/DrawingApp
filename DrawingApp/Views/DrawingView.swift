@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CanvasView: View {
+struct DrawingView: View {
     @ObservedObject var viewModel: ToolViewModel
     
     private var dragGesture: some Gesture {
@@ -41,8 +41,8 @@ struct CanvasView: View {
     }
 }
 
-struct CanvasView_Previews: PreviewProvider {
+struct DrawingView_Previews: PreviewProvider {
     static var previews: some View {
-        CanvasView(viewModel: ToolViewModel())
+        DrawingView(viewModel: ToolViewModel())
     }
 }
